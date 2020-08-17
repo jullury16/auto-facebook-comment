@@ -1,0 +1,36 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <form action="/" method="POST">
+    <div class="form-group">
+      <label class="col-md-6 col-sm-12" for="username">Adresse email ou tel:</label>
+      <input class="col-md-6 col-sm-12" type="text" name="username" id="username">
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 col-sm-12" for="pwd">Mot de passe:</label>
+      <input class="col-md-6 col-sm-12" type="password" name="pwd" id="pwd">
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 col-sm-12" for="link">URL de la publication:</label>
+      <input class="col-md-6 col-sm-12" type="text" name="link" id="link">
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 col-sm-12" for="coms">Commentaire:</label>
+      <input class="col-md-6 col-sm-12" type="text" id="coms" name="coms">
+    </div>
+    <div class="form-group">
+      <label for="file"  class="col-md-6 col-sm-12">Fichier</label>
+      <input type="text" id="file" name="file" class="col-md-6 col-sm-12">
+    </div>
+    <div class="form-group">
+      <label class="col-md-6 col-sm-12" for="nb">Nombre de commentaire</label>
+      <input class="col-md-6 col-sm-12" type="number" name="nb" id="nb" step="1" min="1">
+    </div>
+    <div class="form-group">
+      <input type="submit" class="btn btn-primary" value="Envoyer">
+    </div>
+    <div class="form-group">
+      <p id="alert-no-save">* Votre adresse email et mot de passe ne seront pas sauvegardé</p>
+    </div>
+  </form>
+{% endblock %}
